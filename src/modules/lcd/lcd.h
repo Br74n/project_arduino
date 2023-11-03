@@ -2,6 +2,6 @@
 #define LCD_H
 
 void config();
-void count();
+void showLcd(int a, int b);
 
 #endif
