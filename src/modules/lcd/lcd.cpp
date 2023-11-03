@@ -6,14 +6,14 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 void config()
 {
     lcd.begin(16, 2);
-    lcd.print("mi config");
+    lcd.print("Humedad:    %");
 }
 
-int a = 0;
+ 
 
-void count()
+void showLcd(int a)
 {
-    lcd.setCursor(0, 1);
+    lcd.setCursor(10, 0);
     delay(500);
     lcd.print(a);
     a++;
