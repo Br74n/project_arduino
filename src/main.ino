@@ -1,5 +1,7 @@
 #include <Arduino.h>
 #include "modules/lcd/lcd.h"
+#include "modules/humedad/modulo-humedad.h"
+int h = 0;
 
 void setup()
 {
@@ -8,5 +10,6 @@ void setup()
 
 void loop()
 {
-  count();
+  h = medirHumedad();
+  showLcd(h);
 }
