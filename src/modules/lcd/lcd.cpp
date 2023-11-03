@@ -7,14 +7,15 @@ void config()
 {
     lcd.begin(16, 2);
     lcd.print("Humedad:    %");
+    lcd.setCursor(0, 1);
+    lcd.print("Temp:       C");
 }
 
- 
 
-void showLcd(int a)
+void showLcd(int a, int b)
 {
     lcd.setCursor(10, 0);
-    delay(500);
-    lcd.print(a);
-    a++;
+    lcd.print(a);   //Imprime valor de humedad
+    lcd.setCursor(10, 1);
+    lcd.print(b);   //Imprime valor de temperatura
 }
